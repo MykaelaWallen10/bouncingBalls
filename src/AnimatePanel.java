@@ -6,7 +6,7 @@ import java.awt.*;
 public class AnimatePanel extends JPanel
 {
 
-    ball[] balls = new ball[100];
+    ball[] balls = new ball[20];
 
 
     public AnimatePanel()
@@ -14,7 +14,7 @@ public class AnimatePanel extends JPanel
         setPreferredSize(new Dimension(400,400));
         setBackground(Color.BLUE);
         for(int i = 0; i< balls.length; i++){
-            balls[i] = new ball((int)(Math.random()*100),(int)(Math.random()*100),(int)(Math.random()*100),(int)(Math.random()*10),(int)(Math.random()*10));
+            balls[i] = new ball((int)(Math.random()*100),(int)(Math.random()*100),(int)(Math.random()*100),(int)(Math.random()*10)+1,(int)(Math.random()*10)+1);
         }
 
     }
@@ -51,7 +51,7 @@ public class AnimatePanel extends JPanel
         // pause the program
         try
         {
-            Thread.sleep((int)(Math.random()*20));
+            Thread.sleep(10);
 
         }
         catch(Exception blah)
